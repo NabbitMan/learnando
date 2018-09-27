@@ -1,0 +1,18 @@
+{% extends "account/base.html" %}
+ 
+{% block title %}Labs{% endblock %}
+ 
+{% block content %}
+  <h1>Hands-on Labs</h1>
+  {% for lab in labs %}
+    <h2>
+      <a href="{{ post.get_absolute_url }}">
+        {{ lab.title }}
+      </a>
+    </h2>
+    <p class="date">
+      Published {{ lab.publish }} by {{ lab.author }}
+    </p>    
+  {% endfor %}
+  {% include "pagination.html" with page=page_obj %}
+{% endblock %}
