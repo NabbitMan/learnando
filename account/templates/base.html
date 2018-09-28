@@ -17,7 +17,7 @@
           <a href="#">Courses</a>
         </li>
         <li {% if section == "labs" %}class="selected"{% endif %}>
-          <a href="#">Labs</a>
+          <a href="{% url "labs:lab_list" %}">Labs</a>
         </li>
       </ul>
     {% endif %}
