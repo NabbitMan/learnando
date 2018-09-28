@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+ 
+{% block title %}{{ lab.title }}{% endblock %} 
+ 
+{% block content %} 
+  <h1>{{ lab.title }}</h1> 
+  <p class="date"> 
+    Published {{ lab.publish }} by {{ lab.author }} 
+  </p> 
+  {{ lab.body|linebreaks }} 
+{% endblock %}

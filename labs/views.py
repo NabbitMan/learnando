@@ -23,11 +23,11 @@ def lab_list(request):
 
 
 def lab_detail(request, skill, lab):
-    lab = get_object_or_404(Lab, slug=lab,
-                                   status='published',
-                                   publish__year=year,
-                                   publish__month=month,
-                                   publish__day=day)
+    print(skill)
+    lab = get_object_or_404(Lab,
+                            slug=lab,
+                            status='published')
+    print(lab)
     return render(request,
                   'labs/detail.html',
                   {'lab': lab})
